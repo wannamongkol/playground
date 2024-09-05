@@ -5,6 +5,7 @@ defineProps<{ msg: string }>()
 
 const count = ref(0)
 const isDisabled = ref(true)
+const msgBox = ref()
 const obj1 = reactive({
   test : "reactive"
 })
@@ -26,7 +27,9 @@ const switchBtn = () => {
  
   </div>
 
-  <div class="container">
+  <div class="container p-4">
+    <h5>Text Container : {{ msgBox }}</h5>
+    <input v-model="msgBox" placeholder="testing">
 
   </div>
 
@@ -35,10 +38,6 @@ const switchBtn = () => {
 
 <style scoped>
 
-.container {
-  padding: 100px;
-  background-color: #f5f5f5;
-  border-radius: 10px;
-}
+
 
 </style>
